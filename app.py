@@ -13,6 +13,9 @@ db = SQLAlchemy(app)
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(200), nullable=False)
+with app.app_context():
+    db.create_all()
+
 
 # Home page with form and messages
 @app.route('/', methods=['GET', 'POST'])

@@ -8,7 +8,7 @@ WORKDIR /app
 RUN pip install flask
 RUN pip install flask_sqlalchemy
 RUN pip install PyMySQL
-
+RUN pip install cryptography
 
 # Copy the application code
 COPY . .
