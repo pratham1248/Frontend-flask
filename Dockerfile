@@ -6,6 +6,9 @@ WORKDIR /app
 
 # Copy the requirements file and install dependencies
 RUN pip install flask
+RUN pip install flask_sqlalchemy
+RUN pip install PyMySQL
+
 
 # Copy the application code
 COPY . .
