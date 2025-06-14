@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask + MySQL</title>
+</head>
+<body>
+    <h1>Leave a Message</h1>
+    <form method="post">
+        <input type="text" name="message" required>
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Messages:</h2>
+    <ul>
+        {% for msg in messages %}
+            <li>{{ msg.text }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
